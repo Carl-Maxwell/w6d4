@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Carousel</title>
+    <script src="./../js/jquery-2.1.4.js"></script>
+    <script src="./../js/carousel.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+    <link href="./../css/carousel.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="carousel">
+      <div class="items">
+        <img src="http://lorempixel.com/g/400/200/" />
+        <img src="http://placecreature.com/flying-squirrel/400/155" />
+        <img src="http://baconmockup.com/400/300" />
+        <img src="http://place-hoff.com/400/155" />
+      </div>
+
+      <a href="javascript:void(0)" class="slide-left">Prev</a>
+      <a href="javascript:void(0)" class="slide-right">Next</a>
+    </div>
+    <script>
+      $(function() {
+        $(".carousel").carousel();
+      });
+    </script>
+  </body>
+</html>
