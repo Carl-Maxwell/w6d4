@@ -3,13 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>Tabs</title>
-    <script src="./jquery-2.1.4.js"></script>
-    <script src="./tabs.js"></script>
+    <script src="./../js/jquery-2.1.4.js"></script>
+    <script src="./../js/tabs.js"></script>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
-    <link href="./tabs.css" rel="stylesheet" type="text/css">
+    <link href="./../css/tabs.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <ul class='tabs'></ul>
+    <ul class='tabs' data-content-tabs="#content-tabs">
+      <li>
+        <a class="active"
+           href='javascript:void(0);'
+           for="#jack-russel-terrier">Jack Russel Terrier
+        </a>
+      </li>
+      <li>
+        <a href='javascript:void(0);'
+           for="#collie">Border Collie
+        </a>
+      </li>
+      <li>
+        <a href='javascript:void(0);'
+           for="#pug">Pug
+        </a>
+      </li>
+    </ul>
+    <div id="content-tabs">
+      <div class="tab-pane active" id="jack-russel-terrier">
+        <p>One word: feisty. These little guys are full of energy and character, and can be alarmingly assertive. In fact, some people find their energy levels to be overwhelming, and the Jack Russell will not do well with a confined living arrangement or a sedate lifestyle. They need to be busy and they need a lot of exercise! They are both a working dog and a companion dog, and are equally adept at killing rats in your barn or beating the crap out of your slipper. They are highly intelligent and will amuse you for hours on end. But you will earn it, as they seem to need an extraordinary amount of human attention and discipline. If you don't train them, they will train you. Jack Russells tend to be aggressive with other dogs and will chase cats and other small animals. </p>
+      </div>
+      <div class="tab-pane" id="collie">
+        <p>Collies make fantastic family pets because they love to be with people, and love to be part of the family. They are great with children and often take a special interest in them. The Collie's herding instinct will often cause him to follow his small owners around all day, quietly protecting them. Every year Collies receive heroism awards for rescuing children from cars, snakes, and fire. Collies are affectionate, intelligent, easygoing, fun-loving, loyal, devoted, and incredibly responsive to their humans.</p>
+      </div>
+      <div class="tab-pane" id="pug">
+        <p>Pugs are small dogs with big personalities. They live to love and to be loved and were bred for one reason: to be your companion. They will try to live in your lap, eat your food, and sleep on your bed. They are incredibly playful, outgoing, adaptable, happy, lively, and affectionate. They need human companionship to survive, and will not do well at all if left alone for long periods of time. Your Pug will want and need to be part of your family. A Pug will spend his life by your side, every moment of it.</p>
+      </div>
+    </div>
     <script>
       $(function() {
         $('.tabs').tabs();
