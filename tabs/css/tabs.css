@@ -6,6 +6,12 @@ a.active{
   display: none;
 }
 
+.tab-pane.transitioning {
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
 .tab-pane.active{
   display: block;
 }
