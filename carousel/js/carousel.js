@@ -19,7 +19,6 @@
 
   $.Carousel.prototype.slide = function (dir) {
     if (this.transitioning) {
-      $('.items img').css('animation-play-state', 'paused');
       return;
     }
 
@@ -29,16 +28,19 @@
     var items = this.$pictures;
     var currentItem = items.eq(this.activeIdx);
 
-    currentItem.addClass(outDirClass);
     currentItem.one('transitionend', function (e){
       currentItem.removeClass('active '+ outDirClass);
       this.transitioning = false;
     }.bind(this));
 
     var nextIndex = (this.activeIdx + dir + items.length) % items.length;
-    items.eq(nextIndex).addClass('active ' + inDirClass);
+    var nextItem = items.eq(nextIndex);
+
+    //in the dom but off the screen
+    nextItem.addClass('active ' + inDirClass);
 
     setTimeout(function() {
+      currentItem.addClass(outDirClass);
       this.removeClass(inDirClass);
     }.bind(items.eq(nextIndex)), 0);
 
