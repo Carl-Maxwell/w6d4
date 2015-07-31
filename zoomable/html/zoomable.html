@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Zoomables</title>
+    <script src="./../js/jquery-2.1.4.js"></script>
+    <script src="./../js/zoomable.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset-min.css">
+    <link href="./../css/zoomable.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="zoomable">
+      <img src="../images/game.jpeg">
+    </div>
+    <div class="zoomed-image"></div>
+    <script>
+      $(function() {
+        $(".zoomable").zoomable();
+      });
+    </script>
+  </body>
+</html>
